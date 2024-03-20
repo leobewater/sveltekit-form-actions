@@ -1,11 +1,12 @@
 import { redirect } from '@sveltejs/kit';
 import { DB_USER, DB_PASSWORD } from '$env/static/private';
-// import { secretKey } from '$lib/server/secrets';
+// hold the same value with different environments and only be used on server side not client side
+import { secretKey } from '$lib/server/secrets'; 
 
 // Protect news articles only for logged in users
 export const load = ({ cookies, url }) => {
 	console.log(`Connecting to database with username ${DB_USER} and password ${DB_PASSWORD}`);
-	// console.log(secretKey);
+	console.log(secretKey);
 
 	if (!cookies.get('username')) {
 		throw redirect(307, `/auth?redirectTo=${url.pathname}`);
