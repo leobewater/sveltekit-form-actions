@@ -5,6 +5,7 @@
 	const redirectTo = $page.url.searchParams.get('redirectTo') || '/';
 </script>
 
+<!-- use:enhance - login and redirect without a full refresh -->
 <form method="post" action="?/login&redirectTo={redirectTo}" use:enhance>
 	<p>{form?.message || ''}</p>
 	<input type="text" name="username" placeholder="Username" value={form?.username ?? ''} />
