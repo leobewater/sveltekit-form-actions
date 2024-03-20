@@ -1,7 +1,9 @@
 import { fail, redirect } from '@sveltejs/kit';
 
+// Form actions work even disabling javascript in browser
 export const actions = {
-	login: async ({ request, cookies, url }) => {
+  login: async ({ request, cookies, url }) => {
+    // Use .formData() instead of .json()
 		const data = await request.formData();
 		const username = data.get('username');
 		const password = data.get('password');

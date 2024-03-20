@@ -1,5 +1,6 @@
 import { json } from '@sveltejs/kit';
 
+// Only +server file can set cookie
 export async function POST({ request, cookies }) {
 	const data = await request.json();
 	const { username, password } = data;
