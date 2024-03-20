@@ -1,3 +1,5 @@
+Video: https://www.youtube.com/watch?v=QfwNNKq6-bw&list=PLC3y8-rFHvwjifDNQYYWI6i06D7PjF0Ua&index=51&ab_channel=Codevolution
+
 # create-svelte
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
